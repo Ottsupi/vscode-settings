@@ -12,11 +12,6 @@
         "when": "isDevelopment"
     },
     {
-        "key": "escape",
-        "command": "-extension.vim_escape",
-        "when": "editorTextFocus && vim.active && !inDebugRepl"
-    },
-    {
         "key": "ctrl+z",
         "command": "-undo"
     },
@@ -53,19 +48,19 @@
         "command": "workbench.action.focusPanel"
     },
     {
-        "key": "ctrl+l",
+        "key": "ctrl+tab",
         "command": "workbench.action.nextPanelView",
         "when": "panelFocus"
     },
     {
-        "key": "ctrl+h",
+        "key": "ctrl+shift+tab",
         "command": "workbench.action.previousPanelView",
         "when": "panelFocus"
     },
     {
         "key": "ctrl+space",
         "command": "workbench.action.toggleMaximizedPanel",
-        "when": "activePanel",
+        "when": "activePanel"
     },
 
     // Terminal Navigation
@@ -79,54 +74,22 @@
         "command": "workbench.action.terminal.kill",
         "when": "terminalFocus"
     },
-    {
-        "key": "ctrl+j",
-        "command": "workbench.action.terminal.focusNext",
-        "when": "terminalFocus"
-    },
-    {
-        "key": "ctrl+k",
-        "command": "workbench.action.terminal.focusPrevious",
-        "when": "terminalFocus"
-    },
-
 
     // Sidebar navigation
     {
         "key": "ctrl+e",
-        "command": "workbench.action.focusSideBar",
+        "command": "workbench.action.focusSideBar"
     },
     {
         "key": "ctrl+e",
         "command": "workbench.action.toggleSidebarVisibility",
         "when": "sideBarFocus"
     },
-    {
-        "key": "ctrl+l",
-        "command": "workbench.action.focusLastEditorGroup",
-        "when": "sideBarFocus"
-    },
-    {
-        "key": "ctrl+j",
-        "command": "workbench.action.nextSideBarView",
-        "when": "sideBarFocus"
-    },
-    {
-        "key": "ctrl+k",
-        "command": "workbench.action.previousSideBarView",
-        "when": "sideBarFocus"
-    },
-
 
     // File tree
     {
         "key": "n",
         "command": "explorer.newFile",
-        "when": "filesExplorerFocus && !inputFocus"
-    },
-    {
-        "key": "shift+n",
-        "command": "explorer.newFolder",
         "when": "filesExplorerFocus && !inputFocus"
     },
     {
@@ -150,127 +113,34 @@
         "when": "filesExplorerFocus && !inputFocus"
     },
     {
-        "key": "shift+l",
-        "command": "explorer.openToSide",
-        "when": "filesExplorerFocus && !inputFocus"
-    },
-    {
         "key": "z",
         "command": "workbench.explorer.fileView.resetViewLocation",
         "when": "filesExplorerFocus && !inputFocus"
     },
 
-    // Debugging
+    // Tabs Navigation
     {
-        "key": "ctrl+d ctrl+r",
-        "command": "workbench.action.debug.restart",
-        "when": "inDebugMode"
-    },
-
-    // Remapping for code action, suggestion, and quick fix dropdowns
-    // ctrl j = down
-    // ctrl y = up
-    // ctrl h = open/close dropdowns
-    // ctrl l = accept
-
-    // Suggestions
-    {
-        "key": "ctrl+j",
-        "command": "selectNextSuggestion",
-        "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus || suggestWidgetVisible && textInputFocus && !suggestWidgetHasFocusedSuggestion"
+        "key": "ctrl+tab",
+        "command": "workbench.action.nextEditor"
     },
     {
-        "key": "ctrl+down",
-        "command": "-selectNextSuggestion",
-        "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus || suggestWidgetVisible && textInputFocus && !suggestWidgetHasFocusedSuggestion"
+        "key": "ctrl+shift+tab",
+        "command": "workbench.action.previousEditor"
     },
     {
-        "key": "ctrl+k",
-        "command": "selectPrevSuggestion",
-        "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus || suggestWidgetVisible && textInputFocus && !suggestWidgetHasFocusedSuggestion"
+        "key": "ctrl+shift+pagedown",
+        "command": "workbench.action.moveEditorLeftInGroup"
     },
     {
-        "key": "ctrl+up",
-        "command": "-selectPrevSuggestion",
-        "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus || suggestWidgetVisible && textInputFocus && !suggestWidgetHasFocusedSuggestion"
-    },
-
-    // Code actions
-    {
-        "key": "ctrl+k",
-        "command": "selectPrevCodeAction",
-        "when": "codeActionMenuVisible"
+        "key": "ctrl+shift+pageup",
+        "command": "-workbench.action.moveEditorLeftInGroup"
     },
     {
-        "key": "ctrl+j",
-        "command": "selectNextCodeAction",
-        "when": "codeActionMenuVisible"
-    },
-
-    // Show/hide dropdown
-    {
-        "key": "ctrl+h",
-        "command": "hideSuggestWidget",
-        "when": "suggestWidgetVisible"
+        "key": "ctrl+shift+pageup",
+        "command": "workbench.action.moveEditorRightInGroup"
     },
     {
-        "key": "escape",
-        "command": "-hideSuggestWidget",
-        "when": "suggestWidgetVisible && textInputFocus"
-    },
-    {
-        "key": "ctrl+h",
-        "command": "hideCodeActionWidget",
-        "when": "codeActionMenuVisible"
-    },
-    {
-        "key": "ctrl+h",
-        "command": "problems.action.showQuickFixes",
-        "when": "!suggestWidgetVisible && problemFocus"
-    },
-    {
-        "key": "ctrl+h",
-        "command": "editor.action.quickFix",
-        "when": "!suggestWidgetVisible && editorHasCodeActionsProvider && textInputFocus && !editorReadonly"
-    },
-
-    // Accept dropdown 
-    {
-        "key": "enter",
-        "command": "-acceptSelectedSuggestion",
-        "when": "suggestWidgetHasFocusedSuggestion && suggestWidgetVisible && textInputFocus"
-    },
-    {
-        "key": "tab",
-        "command": "-acceptSelectedSuggestion",
-        "when": "suggestWidgetHasFocusedSuggestion && suggestWidgetVisible && textInputFocus"
-    },
-    {
-        "key": "enter",
-        "command": "-acceptSelectedCodeAction",
-        "when": "codeActionMenuVisible"
-    },
-    {
-        "key": "tab",
-        "command": "-acceptSelectedCodeAction",
-        "when": "codeActionMenuVisible"
-    },
-    {
-        "key": "ctrl+l",
-        "command": "acceptSelectedCodeAction",
-        "when": "codeActionMenuVisible"
-    },
-    {
-        "key": "ctrl+l",
-        "command": "acceptSelectedSuggestion",
-        "when": "suggestWidgetHasFocusedSuggestion && suggestWidgetVisible && textInputFocus"
-    },
-
-    // AI
-    {
-        "key": "ctrl+l",
-        "command": "editor.action.inlineSuggest.acceptNextWord",
-        "when": "!suggestWidgetVisible && inlineSuggestionVisible && !editorReadonly"
-    },
-
+        "key": "ctrl+shift+pagedown",
+        "command": "-workbench.action.moveEditorRightInGroup"
+    }
 ]

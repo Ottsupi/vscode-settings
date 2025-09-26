@@ -3,11 +3,10 @@
     "window.titleBarStyle": "custom",
     "explorer.compactFolders": false,
     "diffEditor.renderSideBySide": false,
-    "workbench.externalBrowser": "firefox",
 
     // Appearance
-    "workbench.colorTheme": "GitHub Light",
     "workbench.iconTheme": "material-icon-theme",
+    "workbench.productIconTheme": "material-product-icons",
 
     // Editor
     "breadcrumbs.enabled": false,
@@ -15,6 +14,7 @@
     "editor.minimap.enabled": false,
     "editor.stickyScroll.maxLineCount": 8,
     "editor.cursorSurroundingLines": 8,
+    "editor.matchBrackets": false,
 
     // Zen Mode
     "zenMode.restore": false,
@@ -32,8 +32,6 @@
     "git.openRepositoryInParentFolders": "never",
     "Notes.notesLocation": "",
 
-    "dart.devToolsTheme": "light",
-    "dart.devToolsBrowser": "default",
     "dart.debugExternalPackageLibraries": false,
     "dart.debugSdkLibraries": false,
     "[dart]": {
@@ -57,7 +55,7 @@
         "<ctrl+h>": true,
         "<ctrl+j>": true,
         "<ctrl+k>": true,
-        "<ctrl+l>": true,
+        "<ctrl+l>": true
     },
     "vim.normalModeKeyBindingsNonRecursive": [
         // Buffers
@@ -65,14 +63,14 @@
         { "before": ["<S-l>"], "commands": [":bnext"] },
 
         // Splits
-        { "before": ["leader", "h"], "commands": ["workbench.action.focusLeftGroup"] },
-        { "before": ["leader", "j"], "commands": ["workbench.action.focusBelowGroup"] },
-        { "before": ["leader", "k"], "commands": ["workbench.action.focusAboveGroup"] },
-        { "before": ["leader", "l"], "commands": ["workbench.action.focusRightGroup"] },
-        { "before": ["leader", "H"], "commands": ["workbench.action.moveEditorToLeftGroup"] },
-        { "before": ["leader", "J"], "commands": ["workbench.action.moveEditorToBelowGroup"] },
-        { "before": ["leader", "K"], "commands": ["workbench.action.moveEditorToAboveGroup"] },
-        { "before": ["leader", "L"], "commands": ["workbench.action.moveEditorToRightGroup"] },
+        { "before": ["leader", "y"], "commands": ["workbench.action.focusLeftGroup"] },
+        { "before": ["leader", "h"], "commands": ["workbench.action.focusBelowGroup"] },
+        { "before": ["leader", "a"], "commands": ["workbench.action.focusAboveGroup"] },
+        { "before": ["leader", "e"], "commands": ["workbench.action.focusRightGroup"] },
+        { "before": ["leader", "leader", "y"], "commands": ["workbench.action.moveEditorToLeftGroup"] },
+        { "before": ["leader", "leader", "h"], "commands": ["workbench.action.moveEditorToBelowGroup"] },
+        { "before": ["leader", "leader", "a"], "commands": ["workbench.action.moveEditorToAboveGroup"] },
+        { "before": ["leader", "leader", "e"], "commands": ["workbench.action.moveEditorToRightGroup"] },
 
         // Files
         { "before": ["leader", "w"], "commands": [":w"] },
@@ -90,17 +88,13 @@
 
         // Indention
         { "before": ["<"], "commands": ["editor.action.outdentLines"] },
-        { "before": [">"], "commands": ["editor.action.indentLines"] },
+        { "before": [">"], "commands": ["editor.action.indentLines"] }
     ],
     "vim.visualModeKeyBindings": [
         // Indention
         { "before": ["<"], "commands": ["editor.action.outdentLines"] },
         { "before": [">"], "commands": ["editor.action.indentLines"] },
 
-        // Move selected lines up/down
-        { "before": ["J"], "commands": ["editor.action.moveLinesDownAction"] },
-        { "before": ["K"], "commands": ["editor.action.moveLinesUpAction"] },
-
         { "before": ["leader", "c"], "commands": ["editor.action.commentLine"] }
-    ],
+    ]
 }
