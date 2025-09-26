@@ -5,6 +5,7 @@
     "diffEditor.renderSideBySide": false,
 
     // Appearance
+    "workbench.colorTheme": "Nord",
     "workbench.iconTheme": "material-icon-theme",
     "workbench.productIconTheme": "material-product-icons",
 
@@ -15,6 +16,8 @@
     "editor.stickyScroll.maxLineCount": 8,
     "editor.cursorSurroundingLines": 8,
     "editor.matchBrackets": false,
+    "editor.occurrencesHighlight": "off",
+    "editor.selectionHighlight": false,
 
     // Zen Mode
     "zenMode.restore": false,

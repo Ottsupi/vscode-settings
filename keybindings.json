@@ -85,6 +85,16 @@
         "command": "workbench.action.toggleSidebarVisibility",
         "when": "sideBarFocus"
     },
+    {
+        "key": "ctrl+tab",
+        "command": "workbench.action.nextSideBarView",
+        "when": "sideBarFocus"
+    },
+    {
+        "key": "ctrl+shift+tab",
+        "command": "workbench.action.previousSideBarView",
+        "when": "sideBarFocus"
+    },
 
     // File tree
     {
@@ -121,15 +131,18 @@
     // Tabs Navigation
     {
         "key": "ctrl+tab",
-        "command": "workbench.action.nextEditor"
+        "command": "workbench.action.nextEditor",
+        "when": "editorFocus"
     },
     {
         "key": "ctrl+shift+tab",
-        "command": "workbench.action.previousEditor"
+        "command": "workbench.action.previousEditor",
+        "when": "editorFocus"
     },
     {
         "key": "ctrl+shift+pagedown",
-        "command": "workbench.action.moveEditorLeftInGroup"
+        "command": "workbench.action.moveEditorLeftInGroup",
+        "when": "editorFocus"
     },
     {
         "key": "ctrl+shift+pageup",
@@ -137,7 +150,8 @@
     },
     {
         "key": "ctrl+shift+pageup",
-        "command": "workbench.action.moveEditorRightInGroup"
+        "command": "workbench.action.moveEditorRightInGroup",
+        "when": "editorFocus"
     },
     {
         "key": "ctrl+shift+pagedown",
