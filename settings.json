@@ -30,6 +30,14 @@
     "debug.toolBarLocation": "docked",
     "debug.enableStatusBarColor": false,
 
+    // Color Override
+    "workbench.colorCustomizations": {
+        "gitDecoration.modifiedResourceForeground": "#81a1c1",
+        "gitDecoration.deletedResourceForeground": "#bf616a",
+        "gitDecoration.untrackedResourceForeground": "#a3be8c",
+        "gitDecoration.ignoredResourceForeground": "#d8dee966"
+    },
+
     // Extensions
     "extensions.ignoreRecommendations": true,
     "git.openRepositoryInParentFolders": "never",
